@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eid Mubarak 1446 H</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+
+    <nav id="nav-dots">
+      <div class="nav-dot active" data-target="hero"></div>
+      <div class="nav-dot" data-target="greeting"></div>
+      <div class="nav-dot" data-target="lanterns"></div>
+      <div class="nav-dot" data-target="doa"></div>
+      <div class="nav-dot" data-target="tips"></div>
+      <div class="nav-dot" data-target="thr"></div>
+      <div class="nav-dot" data-target="closing"></div>
+    </nav>
+
+    <canvas id="stars-canvas"></canvas>
+
+    <!-- jangan di otak atik lagi -->
+    <section id="hero">
+      <div class="geo-bg">
+        <svg viewBox="0 0 800 800" width="100%" height="100%">
+          <polygon
+            points="400,50 750,620 50,620"
+            fill="none"
+            stroke="#C9933A"
+            stroke-width="1"
+          />
+          <polygon
+            points="400,150 650,580 150,580"
+            fill="none"
+            stroke="#C9933A"
+            stroke-width="0.5"
+          />
+          <circle
+            cx="400"
+            cy="400"
+            r="300"
+            fill="none"
+            stroke="#C9933A"
+            stroke-width="0.5"
+          />
+          <circle
+            cx="400"
+            cy="400"
+            r="200"
+            fill="none"
+            stroke="#C9933A"
+            stroke-width="0.3"
+          />
+          <!-- 8 bintang -->
+          <polygon
+            points="400,120 420,380 680,380 470,530 550,780 400,640 250,780 330,530 120,380 380,380"
+            fill="none"
+            stroke="#C9933A"
+            stroke-width="0.4"
+          />
+        </svg>
+      </div>
+
+      <div
+        style="
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <div class="hero-moon"></div>
+        <h1 class="arabic-title">عيد مبارك</h1>
+        <p class="hero-sub">Eid Mubarak 1447 H</p>
+        <p class="hero-year">— 21 Februari 2026 —</p>
+      </div>
+      <div class="scroll-hint">
+        <span>↓</span>
+        scroll to explore
+      </div>
+    </section>
+
+    <!-- isi main sapaan -->
+    <section id="greeting">
+      <div class="greeting-inner">
+        <span class="section-tag reveal">✦ Ucapan Hari Raya ✦</span>
+        <div class="ornament reveal" style="transition-delay: 0.1s">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
+        </div>
+        <h2 class="section-title reveal" style="transition-delay: 0.2s">
+          Selamat Merayakan Hari Kemenangan
+        </h2>
+        <p class="section-body reveal" style="transition-delay: 0.3s">
+          Dengan penuh rasa syukur dan kerendahan hati, saya mengucapkan
+          <strong style="color: var(--gold-light)"
+            >Selamat Hari Raya Idul Fitri 1 Syawal 1447 H</strong
+          >. Semoga setiap langkah di hari yang mulia ini membawa keberkahan,
+          kedamaian, dan kebahagiaan bagi seluruh keluarga dan orang-orang
+          terkasih.
+        </p>
+        <br />
+        <p
+          class="section-body reveal"
+          style="
+            transition-delay: 0.4s;
+            font-family: &quot;Amiri&quot;, serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--gold-light);
+            direction: rtl;
+          "
+        >
+          تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ صِيَامَنَا وَقِيَامَنَا
+        </p>
+        <p
+          class="section-body reveal"
+          style="
+            transition-delay: 0.5s;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: rgba(250, 243, 224, 0.5);
+          "
+        >
+          "Semoga Allah menerima puasa dan ibadah kita"
+        </p>
+
+        <!-- Signature -->
+        <div class="reveal" style="transition-delay: 0.65s; margin-top: 3rem">
+          <div class="sender-card">
+            <p class="sender-from">— 🤝 —</p>
+            <p class="sender-name">Muhammad Ryan</p>
+            <p class="sender-note">Mohon maaf lahir &amp; batin 🌙</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ LANTERNS ══════════════ -->
+    <section id="lanterns">
+      <div style="text-align: center; z-index: 2" class="reveal">
+        <span class="section-tag">✦ Lentera Ramadan ✦</span>
+        <h2 class="section-title">Cahaya yang Menerangi Jiwa</h2>
+      </div>
+
+      <div class="lantern-row" style="z-index: 2">
+        <!-- Lantern 1 -->
+        <div class="lantern-wrap reveal-left" style="transition-delay: 0.1s">
+          <div class="lantern">
+            <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+              <line
+                x1="40"
+                y1="0"
+                x2="40"
+                y2="15"
+                stroke="#C9933A"
+                stroke-width="2"
+              />
+              <rect x="28" y="14" width="24" height="6" rx="2" fill="#8B6220" />
+              <path
+                d="M20,20 Q10,60 15,100 Q30,115 40,116 Q50,115 65,100 Q70,60 60,20 Z"
+                fill="url(#lanternGrad1)"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <path
+                d="M24,20 Q18,55 22,95 Q30,110 40,111 Q50,110 58,95 Q62,55 56,20 Z"
+                fill="rgba(255,200,50,0.15)"
+              />
+              <!-- ribs -->
+              <line
+                x1="20"
+                y1="50"
+                x2="60"
+                y2="50"
+                stroke="#C9933A"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <line
+                x1="17"
+                y1="70"
+                x2="63"
+                y2="70"
+                stroke="#C9933A"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <line
+                x1="17"
+                y1="90"
+                x2="63"
+                y2="90"
+                stroke="#C9933A"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <!-- flame -->
+              <ellipse
+                cx="40"
+                cy="68"
+                rx="8"
+                ry="14"
+                fill="rgba(255,220,80,0.25)"
+              />
+              <path
+                d="M40,58 Q44,62 43,68 Q41,73 40,70 Q39,73 37,68 Q36,62 40,58Z"
+                fill="#FFD050"
+              />
+              <!-- bottom -->
+              <rect
+                x="28"
+                y="110"
+                width="24"
+                height="6"
+                rx="2"
+                fill="#8B6220"
+              />
+              <line
+                x1="35"
+                y1="116"
+                x2="35"
+                y2="125"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <line
+                x1="45"
+                y1="116"
+                x2="45"
+                y2="125"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <defs>
+                <linearGradient id="lanternGrad1" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#8B6220" />
+                  <stop offset="40%" stop-color="#E8BA5C" />
+                  <stop offset="60%" stop-color="#E8BA5C" />
+                  <stop offset="100%" stop-color="#8B6220" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <p class="lantern-label">Syukur</p>
+        </div>
+
+        <!-- Lantern 2 (bigger center) -->
+        <div
+          class="lantern-wrap reveal"
+          style="
+            transition-delay: 0.05s;
+            transform: scale(1.25);
+            transform-origin: bottom center;
+          "
+        >
+          <div class="lantern" style="animation-delay: -0.7s">
+            <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+              <line
+                x1="40"
+                y1="0"
+                x2="40"
+                y2="15"
+                stroke="#C9933A"
+                stroke-width="2"
+              />
+              <rect x="28" y="14" width="24" height="6" rx="2" fill="#8B6220" />
+              <path
+                d="M18,20 Q6,62 12,102 Q28,118 40,119 Q52,118 68,102 Q74,62 62,20 Z"
+                fill="url(#lanternGrad2)"
+                stroke="#E8BA5C"
+                stroke-width="1.5"
+              />
+              <path
+                d="M22,20 Q14,58 19,98 Q31,113 40,114 Q49,113 61,98 Q66,58 58,20 Z"
+                fill="rgba(255,200,50,0.2)"
+              />
+              <line
+                x1="18"
+                y1="52"
+                x2="62"
+                y2="52"
+                stroke="#E8BA5C"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <line
+                x1="14"
+                y1="72"
+                x2="66"
+                y2="72"
+                stroke="#E8BA5C"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <line
+                x1="13"
+                y1="92"
+                x2="67"
+                y2="92"
+                stroke="#E8BA5C"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <ellipse
+                cx="40"
+                cy="70"
+                rx="10"
+                ry="16"
+                fill="rgba(255,220,80,0.3)"
+              />
+              <path
+                d="M40,56 Q46,62 44,70 Q42,76 40,72 Q38,76 36,70 Q34,62 40,56Z"
+                fill="#FFE060"
+              />
+              <rect
+                x="28"
+                y="113"
+                width="24"
+                height="6"
+                rx="2"
+                fill="#8B6220"
+              />
+              <line
+                x1="33"
+                y1="119"
+                x2="33"
+                y2="128"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <line
+                x1="47"
+                y1="119"
+                x2="47"
+                y2="128"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <defs>
+                <linearGradient id="lanternGrad2" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#7a5710" />
+                  <stop offset="40%" stop-color="#F5E080" />
+                  <stop offset="60%" stop-color="#F5E080" />
+                  <stop offset="100%" stop-color="#7a5710" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <p class="lantern-label">Kebersamaan</p>
+        </div>
+
+        <!-- Lantern 3 -->
+        <div class="lantern-wrap reveal-right" style="transition-delay: 0.1s">
+          <div class="lantern" style="animation-delay: -2s">
+            <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+              <line
+                x1="40"
+                y1="0"
+                x2="40"
+                y2="15"
+                stroke="#C9933A"
+                stroke-width="2"
+              />
+              <rect x="28" y="14" width="24" height="6" rx="2" fill="#8B6220" />
+              <path
+                d="M20,20 Q10,60 15,100 Q30,115 40,116 Q50,115 65,100 Q70,60 60,20 Z"
+                fill="url(#lanternGrad3)"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <path
+                d="M24,20 Q18,55 22,95 Q30,110 40,111 Q50,110 58,95 Q62,55 56,20 Z"
+                fill="rgba(255,200,50,0.15)"
+              />
+              <line
+                x1="20"
+                y1="50"
+                x2="60"
+                y2="50"
+                stroke="#C9933A"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <line
+                x1="17"
+                y1="70"
+                x2="63"
+                y2="70"
+                stroke="#C9933A"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <line
+                x1="17"
+                y1="90"
+                x2="63"
+                y2="90"
+                stroke="#C9933A"
+                stroke-width="0.8"
+                stroke-dasharray="3,2"
+              />
+              <ellipse
+                cx="40"
+                cy="68"
+                rx="8"
+                ry="14"
+                fill="rgba(255,220,80,0.25)"
+              />
+              <path
+                d="M40,58 Q44,62 43,68 Q41,73 40,70 Q39,73 37,68 Q36,62 40,58Z"
+                fill="#FFD050"
+              />
+              <rect
+                x="28"
+                y="110"
+                width="24"
+                height="6"
+                rx="2"
+                fill="#8B6220"
+              />
+              <line
+                x1="35"
+                y1="116"
+                x2="35"
+                y2="125"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <line
+                x1="45"
+                y1="116"
+                x2="45"
+                y2="125"
+                stroke="#C9933A"
+                stroke-width="1.5"
+              />
+              <defs>
+                <linearGradient id="lanternGrad3" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#8B6220" />
+                  <stop offset="40%" stop-color="#E8BA5C" />
+                  <stop offset="60%" stop-color="#E8BA5C" />
+                  <stop offset="100%" stop-color="#8B6220" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <p class="lantern-label">Kedamaian</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ DOA ══════════════ -->
+    <section id="doa">
+      <div style="text-align: center; z-index: 2" class="reveal">
+        <span class="section-tag">✦ Doa & Harapan ✦</span>
+        <h2 class="section-title">Untaian Doa di Hari Fitri</h2>
+      </div>
+
+      <div class="doa-cards">
+        <div class="doa-card reveal-left" style="transition-delay: 0.1s">
+          <span class="doa-icon">🌙</span>
+          <p class="doa-arabic">كُلُّ عَامٍ وَأَنتُمْ بِخَيْر</p>
+          <p class="doa-latin">Kullu 'aamin wa antum bikhair</p>
+          <p class="doa-trans">
+            Semoga setiap tahun kalian selalu dalam kebaikan
+          </p>
+        </div>
+        <div class="doa-card reveal" style="transition-delay: 0.2s">
+          <span class="doa-icon">⭐</span>
+          <p class="doa-arabic">اَللّهُمَّ بَلِّغْنَا رَمَضَان</p>
+          <p class="doa-latin">Allahumma ballighna Ramadhan</p>
+          <p class="doa-trans">
+            Ya Allah, sampaikan kami kepada Ramadan berikutnya
+          </p>
+        </div>
+        <div class="doa-card reveal-right" style="transition-delay: 0.3s">
+          <span class="doa-icon">🕌</span>
+          <p class="doa-arabic">
+            جَعَلَنَا اللهُ وَإِيَّاكُمْ مِنَ الْعَائِدِينَ
+          </p>
+          <p class="doa-latin">Ja'alanallahu wa iyyakum minal 'aidin</p>
+          <p class="doa-trans">
+            Semoga Allah menjadikan kita termasuk orang-orang yang kembali
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips">
+      <div
+        style="text-align: center; z-index: 2; max-width: 700px"
+        class="reveal"
+      >
+        <span class="section-tag">✦ Amalan Idul Fitri ✦</span>
+        <h2 class="section-title">Hidupkan Sunnah di Hari Kemenangan</h2>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-item reveal" style="transition-delay: 0.1s">
+          <div class="tip-icon-wrap">🌅</div>
+          <p class="tip-title">Shalat Ied</p>
+          <p class="tip-desc">
+            Laksanakan shalat Ied berjamaah di lapangan atau masjid bersama
+            keluarga
+          </p>
+        </div>
+        <div class="tip-item reveal" style="transition-delay: 0.2s">
+          <div class="tip-icon-wrap">🍽️</div>
+          <p class="tip-title">Makan Sebelum Shalat</p>
+          <p class="tip-desc">
+            Sunnahkan makan sebelum berangkat shalat Idul Fitri
+          </p>
+        </div>
+        <div class="tip-item reveal" style="transition-delay: 0.3s">
+          <div class="tip-icon-wrap">💚</div>
+          <p class="tip-title">Zakat Fitrah</p>
+          <p class="tip-desc">
+            Tunaikan zakat fitrah sebelum shalat Ied untuk menyucikan diri
+          </p>
+        </div>
+        <div class="tip-item reveal" style="transition-delay: 0.4s">
+          <div class="tip-icon-wrap">🤝</div>
+          <p class="tip-title">Silaturahmi</p>
+          <p class="tip-desc">
+            Kunjungi keluarga, minta maaf dan saling memaafkan dengan tulus
+          </p>
+        </div>
+        <div class="tip-item reveal" style="transition-delay: 0.5s">
+          <div class="tip-icon-wrap">📿</div>
+          <p class="tip-title">Takbiran</p>
+          <p class="tip-desc">
+            Agungkan nama Allah dengan takbir sejak malam hingga selesai shalat
+          </p>
+        </div>
+        <div class="tip-item reveal" style="transition-delay: 0.6s">
+          <div class="tip-icon-wrap">💝</div>
+          <p class="tip-title">Berbagi</p>
+          <p class="tip-desc">
+            Bagikan kebahagiaan kepada fakir miskin dan anak yatim di sekitar
+          </p>
+        </div>
+        <div class="tip-item reveal" style="transition-delay: 0.5s">
+          <div class="tip-icon-wrap">🚶‍♂️</div>
+          <p class="tip-title">Berjalan Kaki ke Tempat Salat</p>
+          <p class="tip-desc">
+            Dianjurkan berjalan kaki jika tempatnya dekat, sambil tetap
+            bertakbir
+          </p>
+        </div>
+        <div class="tip-item reveal" style="transition-delay: 0.6s">
+          <div class="tip-icon-wrap">💝</div>
+          <p class="tip-title">Mendengarkan Khutbah</p>
+          <p class="tip-desc">
+            Duduk mendengarkan khutbah hingga selesai setelah salat
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THR -->
+    <section id="thr">
+      <div class="thr-header reveal">
+        <span class="thr-emoji">💝</span>
+        <span class="section-tag">✦ Amplop Digital ✦</span>
+        <h2 class="section-title" style="font-size: clamp(1.5rem, 4vw, 2.5rem)">
+          Kirim THR ke Muhammad Ryan (click barcode nya)
+        </h2>
+        <p
+          style="
+            font-size: 0.9rem;
+            color: rgba(250, 243, 224, 0.5);
+            margin-top: 0.5rem;
+            font-style: italic;
+          "
+        >
+          Hehe, seikhlasnya aja gapapa 🤣😂
+        </p>
+      </div>
+
+      <div class="thr-cards">
+        <!-- DANA -->
+        <div class="thr-card reveal-left" style="transition-delay: 0.15s">
+          <p class="thr-brand dana">DANA</p>
+          <div class="qr-placeholder dana-bg" id="dana-qr-wrap">
+            
+            <span class="qr-hint"
+              ><a
+                href="https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012020120910068093"
+                ><img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012020120910068093"
+                  alt="QR Code" /></a
+            ></span>
+          </div>
+          <p class="thr-number">No. HP / Akun DANA:</p>
+          <p class="thr-name-label">0858-2250-6386</p>
+        </div>
+
+        <!-- GOPAY -->
+        <div class="thr-card reveal-right" style="transition-delay: 0.15s">
+          <p class="thr-brand gopay">GoPay</p>
+          <div class="qr-placeholder gopay-bg" id="gopay-qr-wrap">
+            <span class="qr-icon">SORYY GOPAY BUG </span>
+          </div>
+          <p class="thr-number">No. HP / Akun GoPay:</p>
+          <p class="thr-name-label">0858-2250-6386</p>
+        </div>
+      </div>
+      <p class="thr-note reveal" style="transition-delay: 0.3s">
+        ✨ Berapapun Yang penting iklas aja mba/mas ✨
+      </p>
+    </section>
+
+    <!-- penutup -->
+    <section id="closing">
+      <canvas id="fireworks-canvas"></canvas>
+      <div
+        style="
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+        "
+      >
+        <div class="ornament reveal">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
+        </div>
+        <p class="closing-arabic reveal" style="transition-delay: 0.1s">
+          عيد الفطر مبارك
+        </p>
+        <h2
+          class="section-title reveal"
+          style="transition-delay: 0.2s; font-size: clamp(1.3rem, 4vw, 2.5rem)"
+        >
+          Mohon Maaf Lahir &amp; Batin
+        </h2>
+        <p class="closing-tagline reveal" style="transition-delay: 0.3s">
+          Minal 'Aidin wal Faizin — semoga kita semua kembali dalam fitrah yang
+          suci dan termasuk golongan yang beruntung.
+        </p>
+        <p class="closing-year reveal" style="transition-delay: 0.4s">
+          1 Syawal 1447 H · 2026 M
+        </p>
+        <div
+          class="ornament reveal"
+          style="transition-delay: 0.5s; margin-bottom: 0"
+        >
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
