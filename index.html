@@ -661,13 +661,40 @@
         </div>
       </div>
     </section>
-    <audio autoplay muted loop id="bg-audio">
-      <source
-        src="https://drive.google.com/uc?export=download&id=1YjYJIrJDQ0u4qezoSoHZQaAuSeMWkmMA"
-        type="audio/mpeg"
-      />
-    </audio>
 
+    <audio
+      id="bg-audio"
+      src="Ustad Jefri Al Buchori Ft. Drs H. Aswan Faisal - Takbiran Official Music Video.mp3"
+      autoplay
+      loop
+      muted
+    ></audio>
+
+    <script>
+      
+      const audio = document.getElementById("bg-audio");
+
+   
+      audio.currentTime = 11;
+
+      window.addEventListener(
+        "click",
+        () => {
+        
+          audio.muted = false;
+
+      
+          if (audio.currentTime < 11) {
+            audio.currentTime = 11;
+          }
+
+          audio.play().catch((error) => {
+            console.log("Autoplay gagal, perlu interaksi user:", error);
+          });
+        },
+        { once: true },
+      ); 
+    </script>
     <script src="main.js"></script>
   </body>
 </html>

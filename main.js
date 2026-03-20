@@ -166,15 +166,3 @@
 
 
 
-
-window.addEventListener('load', () => {
-  const audio = document.getElementById('bg-audio');
-
-  // set mulai dari detik 11
-  audio.currentTime = 11;
-
-  audio.muted = false;
-  audio.play().catch(() => {
-    console.log("Autoplay diblokir browser");
-  });
-});
